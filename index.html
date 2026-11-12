@@ -25,11 +25,13 @@
       box-shadow:0 0 10px rgba(0,0,0,.1);
     }
 
-    input, select{
+    input,
+    select{
       width:100%;
       padding:10px;
       margin-top:5px;
       margin-bottom:15px;
+      box-sizing:border-box;
     }
 
     button{
@@ -39,55 +41,83 @@
       padding:12px;
       cursor:pointer;
       border-radius:5px;
+      width:100%;
+      font-size:16px;
     }
 
     button:hover{
       background:#087;
+    }
+
+    #resultado{
+      margin-top:20px;
+      padding:20px;
+      background:white;
+      border-radius:10px;
+      display:none;
     }
   </style>
 </head>
 
 <body>
 
-<div class="card">
+  <div class="card">
 
-<h1>🚗 Mi Mejor Opción</h1>
+    <h1>🚗 Mi Mejor Opción</h1>
 
-<p>
-Encuentra la gasolinera más rentable teniendo en cuenta
-el precio del combustible y el coste del desplazamiento.
-</p>
+    <p>
+      Encuentra la gasolinera más rentable teniendo en cuenta
+      el precio del combustible y el coste del desplazamiento.
+    </p>
 
-<label>Dirección de origen</label>
-<input type="text" placeholder="Calle de la Ilusión 39, Madrid">
+    <label for="origen">Dirección de origen</label>
+    <input
+      id="origen"
+      type="text"
+      placeholder="Calle de la Ilusión 39, Madrid"
+    >
 
-<label>Municipio</label>
-<input type="text" placeholder="Madrid">
+    <label for="municipio">Municipio</label>
+    <input
+      id="municipio"
+      type="text"
+      placeholder="Madrid"
+    >
 
-<label>Carburante</label>
-<select>
-    <option>Gasolina 95 E5</option>
-    <option>Gasóleo A</option>
-</select>
+    <label for="carburante">Carburante</label>
+    <select id="carburante">
+      <option>Gasolina 95 E5</option>
+      <option>Gasóleo A</option>
+    </select>
 
-<label>Consumo (l/100 km)</label>
-<input type="number">
+    <label for="consumo">Consumo (l/100 km)</label>
+    <input
+      id="consumo"
+      type="number"
+      min="0"
+      step="0.1"
+      placeholder="6.0"
+    >
 
-<label>Litros a repostar</label>
-<input type="number">
+    <label for="litros">Litros a repostar</label>
+    <input
+      id="litros"
+      type="number"
+      min="1"
+      step="1"
+      placeholder="20"
+    >
 
-<button>Buscar mejores opciones</button>
-<div id="resultado" style="
-margin-top:20px;
-padding:20px;
-background:white;
-border-radius:10px;
-display:none;">
-</div>
+    <button id="buscarBtn">
+      Buscar mejores opciones
+    </button>
 
-<script src="config.js"></script>
-<script src="app.js"></script>
-</div>
+    <div id="resultado"></div>
+
+  </div>
+
+  <script src="config.js"></script>
+  <script src="app.js"></script>
 
 </body>
 </html>
