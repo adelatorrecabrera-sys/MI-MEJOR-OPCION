@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Mejor Opción</title>
+
+  <style>
+    body{
+      font-family: Arial, sans-serif;
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+      background: #f4f4f4;
+    }
+
+    h1{
+      color:#0a5;
+    }
+
+    .card{
+      background:white;
+      padding:20px;
+      border-radius:10px;
+      box-shadow:0 0 10px rgba(0,0,0,.1);
+    }
+
+    input, select{
+      width:100%;
+      padding:10px;
+      margin-top:5px;
+      margin-bottom:15px;
+    }
+
+    button{
+      background:#0a5;
+      color:white;
+      border:none;
+      padding:12px;
+      cursor:pointer;
+      border-radius:5px;
+    }
+
+    button:hover{
+      background:#087;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="card">
+
+<h1>🚗 Mi Mejor Opción</h1>
+
+<p>
+Encuentra la gasolinera más rentable teniendo en cuenta
+el precio del combustible y el coste del desplazamiento.
+</p>
+
+<label>Dirección de origen</label>
+<input type="text" placeholder="Calle de la Ilusión 39, Madrid">
+
+<label>Municipio</label>
+<input type="text" placeholder="Madrid">
+
+<label>Carburante</label>
+<select>
+    <option>Gasolina 95 E5</option>
+    <option>Gasóleo A</option>
+</select>
+
+<label>Consumo (l/100 km)</label>
+<input type="number">
+
+<label>Litros a repostar</label>
+<input type="number">
+
+<button>Buscar mejores opciones</button>
+
+</div>
+
+</body>
+</html>
